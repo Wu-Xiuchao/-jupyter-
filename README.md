@@ -55,7 +55,7 @@
 ``nohup jupyter notebook --allow-root &  #后台运行即可``
 
 ## 截图
-![jupyter]()
+![jupyter](https://github.com/Wu-Xiuchao/-jupyter-/blob/master/1.png)
 
 
 
