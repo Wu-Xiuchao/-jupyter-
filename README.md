@@ -15,15 +15,22 @@
 
 ### 安装python 3.x
 ``cd Python-3.6.1  
+
+
 ./configure –prefix=/usr/local/python3  
+
+
 make && make install``
 
 ### 为python3.x创建一个文件并建立软链接
 ``mkdir -p /usr/local/python3
+
+
 ln -s /usr/local/python3/bin/python3 /usr/bin/python3``
 
 ### 修改环境变量
 ``vim ~/.bash_profile``
+
 打开文件后，添加变量/usr/local/python3/bin，用:隔开
 
 ### 立即启用变量
@@ -33,22 +40,42 @@ ln -s /usr/local/python3/bin/python3 /usr/bin/python3``
 ``pip3 install -U jupyter``
 
 ### 获取hash密码(用于远程登录jupyter所用，就是把你的密码映射成字符串)
-``In [1]: from notebook.auth import passwd  
-In [2]: passwd()  
-Enter password:  
+``In [1]: from notebook.auth import passwd 
+
+
+In [2]: passwd() 
+
+
+Enter password: 
+
+
 Verify password:  
+
+
 Out[2]: 'sha1:xxxxxxxxxxxxxxxxx'``
 
 ### 现在需要jupyter 的配置文件，生成一下
 ``jupyter notebook –generate-config  
+
+
 vim ~/.jupyter/jupyter_notebook_config.py``
 
 ### 修改文件
 ``c.NotebookApp.allow_origin = '*' #允许其他接入  
+
+
 c.NotebookApp.ip = '0.0.0.0' # 监听所有IP  
+
+
 c.NotebookApp.open_browser = False # 不打开浏览器  
+
+
 c.NotebookApp.port = 7000 #端口  
+
+
 c.NotebookApp.notebook_dir = u’jupyter’ #这个是你远程接入jupyter的主目录,运行jupyter必须是这个目录的父目录  
+
+
 c.NotebookApp.password = 'sha1:xxxxxxxxxxxxxxx' #前面的密码``
 
 ### 可以运行了
