@@ -5,7 +5,7 @@
 *参考博客 [https://blog.csdn.net/qq_23845067/article/details/80474003 ]*
 
 ### 安装依赖环境
-``yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel``
+  `yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel   libpcap-devel xz-devel`
 
 ### python3.x下载
 ``wget https://www.python.org/ftp/python/3.6.1/Python-3.6.1.tgz``
